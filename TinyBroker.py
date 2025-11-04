@@ -1,8 +1,8 @@
 from hbmqtt.broker import Broker
 import asyncio
-import logging
+# import logging
+# logging.basicConfig(level=logging.DEBUG)
 
-#logging.basicConfig(level=logging.DEBUG)
 broker_config = {
     'listeners': {
         'default': {

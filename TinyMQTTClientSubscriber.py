@@ -1,7 +1,7 @@
 import paho.mqtt.client as mqtt
 
 broker_address = "127.0.0.1"
-topic = "/test/topic"
+topic = "#"  #listen to all topics
 
 def on_message(client, userdata, msg):
     print("Received:", msg.payload.decode("utf-8"))
