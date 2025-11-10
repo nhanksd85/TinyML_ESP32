@@ -48,6 +48,9 @@ try:
             ],
             "ESP32_002": [
                 {"ts": int(time.time() * 1000), "values": {"temperature": 30.5, "humidity": 80}}
+            ],
+            "ESP32_003": [
+                {"ts": int(time.time() * 1000), "values": {"temperature": 10.5, "humidity": 20}}
             ]
         }
 

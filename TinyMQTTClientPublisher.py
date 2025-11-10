@@ -13,14 +13,16 @@ def on_publish(client, userdata, mid):
     print(f"📨 Message ID {mid} published successfully")
 
 
-client = mqtt.Client("PythonPublisher")
+#client = mqtt.Client("PythonPublisher")
+client = mqtt.Client()
+client.username_pw_set("mqttclient", "12345678")
 client.on_connect = on_connect
 client.on_publish = on_publish
 client.connect(broker_address, 1883)
 client.loop_start()
 
 while True:
-    client.publish(topic, "Hello .....")
+    client.publish(topic, "ABC .....")
     print("Sent a message")
     time.sleep(5)
 client.disconnect()

@@ -4,7 +4,7 @@ broker_address = "127.0.0.1"
 topic = "#"  #listen to all topics
 
 def on_message(client, userdata, msg):
-    print("Received:", msg.payload.decode("utf-8"))
+    print("Received:",msg.topic, msg.payload.decode("utf-8"))
 
 def on_subscribe(client, userdata, mid, granted_qos):
     print("✅ Subscribed successfully.")

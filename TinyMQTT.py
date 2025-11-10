@@ -16,7 +16,11 @@ broker_config = {
     },
     'sys_interval': 10,
     'auth': {
-        'allow-anonymous': True
+        'allow-anonymous': True   # <-- Disable anonymous!
+        #'plugins': ['auth_file'],   # <-- Use file-based auth
+        #'password-file': 'password_file.txt',  # <-- Point to your password file
+        #'plugins': ['allow_all_auth']
+
     },
     'topic-check': {
         'enabled': True,
